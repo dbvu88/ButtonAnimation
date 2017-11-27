@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,77 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ButtonAnimation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heg-aP-XYO">
+                                <rect key="frame" x="49" y="306" width="276" height="54"/>
+                                <color key="backgroundColor" red="0.97884598830000003" green="1" blue="0.37283302369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="Amk-IB-pLX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="Dim">
+                                    <color key="titleColor" red="0.47042280019999999" green="0.074412973440000002" blue="0.32871847199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dimBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SVa-sy-fjL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8U-WL-Fwl">
+                                <rect key="frame" x="49" y="244" width="276" height="54"/>
+                                <color key="backgroundColor" red="0.97884598830000003" green="1" blue="0.37283302369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="p6W-JS-zi8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="Wiggle">
+                                    <color key="titleColor" red="0.47042280019999999" green="0.074412973440000002" blue="0.32871847199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="wiggleBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q8h-dl-liY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xdg-v5-Xpm">
+                                <rect key="frame" x="49" y="368" width="276" height="54"/>
+                                <color key="backgroundColor" red="0.97884598830000003" green="1" blue="0.37283302369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="QYN-KL-Ive"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="Colorize">
+                                    <color key="titleColor" red="0.47042280019999999" green="0.074412973440000002" blue="0.32871847199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="colorizedBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vKg-Lt-o9U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.47042280019999999" green="0.074412973440000002" blue="0.32871847199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="heg-aP-XYO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1HN-u1-R7U"/>
+                            <constraint firstItem="heg-aP-XYO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Gi-TK-0hf"/>
+                            <constraint firstItem="heg-aP-XYO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="49" id="CqS-cn-Bmc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xdg-v5-Xpm" secondAttribute="bottom" constant="245" id="JN5-4l-MAh"/>
+                            <constraint firstItem="heg-aP-XYO" firstAttribute="trailing" secondItem="L8U-WL-Fwl" secondAttribute="trailing" id="MhA-d7-EiB"/>
+                            <constraint firstItem="heg-aP-XYO" firstAttribute="leading" secondItem="L8U-WL-Fwl" secondAttribute="leading" id="Xeb-zC-ZNP"/>
+                            <constraint firstItem="L8U-WL-Fwl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="224" id="dXE-sE-JVB"/>
+                            <constraint firstItem="heg-aP-XYO" firstAttribute="leading" secondItem="Xdg-v5-Xpm" secondAttribute="leading" id="qq6-oB-BHJ"/>
+                            <constraint firstItem="heg-aP-XYO" firstAttribute="trailing" secondItem="Xdg-v5-Xpm" secondAttribute="trailing" id="wfg-Bf-GqE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="colorizedBtn" destination="Xdg-v5-Xpm" id="pdx-tI-gra"/>
+                        <outlet property="dimBtn" destination="heg-aP-XYO" id="ies-Vl-NGj"/>
+                        <outlet property="wiggleBtn" destination="L8U-WL-Fwl" id="VjR-Ox-PNf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>
